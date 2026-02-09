@@ -1,0 +1,75 @@
+Step 1: Create Replit Project
+Go to Replit.com
+Click "Create" → Select "Node.js"
+Name it "Evade-Key-System"
+Step 2: Create the Backend
+Replace the contents of replit.nix:
+
+"replit.nix"
+{ pkgs }: {
+    deps = [
+        pkgs.nodejs
+    ];
+}
+
+Replace the contents of package.json:
+
+"package.json"
+{
+  "name": "evade-key-system",
+  "version": "1.0.0",
+  "description": "Key system for Evade Hub",
+  "main": "server.js",
+  "scripts": {
+Create server.js:
+
+"server.js"
+const express = require('express');
+const sqlite3 = require('sqlite3').verbose();
+const { v4: uuidv4 } = require('uuid');
+const cors = require('cors');
+const app = express();
+
+Step 3: Set Environment Variables
+In Replit:
+
+Click the "Secrets" icon (lock icon) on the left
+Add ADMIN_TOKEN with a strong random value (e.g., your-super-secret-token-here)
+Step 4: Deploy & Get URL
+Click "Run" to start the server
+Replit will give you a URL like https://evade-key-system.replit.dev
+Copy this URL
+Step 5: Create Admin Dashboard (HTML)
+Create admin.html in a separate Replit project or host it locally:
+
+"admin_dashboard.html"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evade Hub - Admin Panel</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+Step 6: Update Your Evade Hub Script
+Replace the key system section with this:
+
+"key_system_section.lua"
+-- Configuration
+local API_URL = "https://evade-key-system.replit.dev" -- Change to your Replit URL
+local HttpService = game:GetService("HttpService")
+
+local keyGui = Instance.new("ScreenGui")
+keyGui.Name = "KeySystem"
+Usage
+Generate Keys: Use the admin dashboard to generate keys
+Set Expiration: Keys auto-expire based on days set
+Assign Keys: Assign keys to specific users
+Track Usage: See which users verified with which keys
+Ban Users: Ban users from accessing the script
+The system will:
+
+✅ Track user IDs
+✅ Track when keys expire
+✅ Prevent key sharing (one key per user)
+✅ Log all verifications
+✅ Allow banning users
+✅ Generate unique keys
