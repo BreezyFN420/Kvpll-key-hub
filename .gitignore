@@ -4,3 +4,46 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# ===== SENSITIVE - NEVER COMMIT =====
+# Bot and Server (keep local only)
+bot/
+key-server/
+Server.js
+server.js
+
+# Environment files with credentials
+.env
+.env.local
+.env.*.local
+*.env
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Misc
+.cache/
+*.tmp
+CHAT_EXPORT.md
+ChatExport.md
+attached_assets/
+
+# ===== PUBLIC ONLY =====
+# Keep these files:
+# - Loader.lua
+# - Evade_Hub_WITH_KEYSYSTEM.lua
+# - README.md
+# - LICENSE (if you have one)
