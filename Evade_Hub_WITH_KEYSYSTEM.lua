@@ -152,7 +152,7 @@ end
 -- MAIN HUB STARTS HERE (Original script)
 -- ============================================================================
 
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source.lua'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "Evade Hub v2.5 (2026)",
